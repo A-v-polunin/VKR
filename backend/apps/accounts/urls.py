@@ -1,0 +1,4 @@
+from django.urls import path
+from . import views
+app_name = 'accounts'
+urlpatterns = [path('telegram/', views.telegram_auth, name='telegram_auth'), path('telegram-bot-info/', views.telegram_bot_info, name='telegram_bot_info'), path('login/', views.login_view, name='login'), path('logout/', views.logout_view, name='logout'), path('register/', views.register, name='register'), path('', views.profile_detail, name='profile_detail'), path('<int:user_id>/', views.profile_detail, name='profile_detail_by_id'), path('edit/', views.profile_edit, name='profile_edit'), path('connect-telegram/', views.connect_telegram, name='connect_telegram'), path('interests/', views.interests_list, name='interests_list'), path('interests/add/', views.interest_add, name='interest_add'), path('interests/<int:pk>/delete/', views.interest_delete, name='interest_delete'), path('reviews/<int:user_id>/', views.reviews_list, name='reviews_list')]

@@ -1,0 +1,26 @@
+.nearby-requests {
+  margin: 2rem 0;
+}
+
+.nearby-requests h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.no-requests {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .requests-grid {
+    grid-template-columns: 1fr;
+  }
+}

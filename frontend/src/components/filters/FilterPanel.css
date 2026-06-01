@@ -1,0 +1,86 @@
+.filter-panel {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-panel .search-input,
+.filter-panel select {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.metro-filter {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 220px;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow-y: auto;
+}
+
+.metro-line-group {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 0.4rem;
+}
+
+.metro-line-group:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.metro-line-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.metro-line-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+}
+
+.metro-stations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.metro-station-option {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.metro-station-option input[type="checkbox"] {
+  width: 0.9rem;
+  height: 0.9rem;
+  accent-color: #667eea;
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    flex-direction: column;
+  }
+
+  .filter-panel .search-input,
+  .filter-panel select {
+    width: 100%;
+  }
+}

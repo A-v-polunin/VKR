@@ -1,0 +1,389 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content.profile-edit-modal {
+  max-width: 700px;
+  width: 95%;
+  padding: 2rem;
+  text-align: left;
+  direction: ltr;
+}
+
+.profile-edit-modal h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: left;
+}
+
+.field-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.35;
+}
+
+.metro-autocomplete-group {
+  position: relative;
+}
+
+.metro-autocomplete-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.metro-autocomplete-wrap input {
+  flex: 1;
+  padding-right: 2.25rem;
+}
+
+.metro-autocomplete-clear {
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  background: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #555;
+}
+
+.metro-autocomplete-clear:hover {
+  background: #ddd;
+}
+
+.metro-autocomplete-list {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.metro-autocomplete-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0.65rem;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.metro-autocomplete-option:hover,
+.metro-autocomplete-option:focus {
+  background: #f5f7ff;
+}
+
+.metro-autocomplete-list li:last-child .metro-autocomplete-option {
+  border-bottom: none;
+}
+
+.metro-line-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.metro-option-name {
+  flex: 1;
+  min-width: 0;
+  color: #222;
+}
+
+.metro-option-line {
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  max-width: 42%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #555;
+}
+
+.metro-autocomplete-empty {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.profile-edit {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  direction: ltr;
+}
+
+.profile-edit .form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.profile-edit .form-group > label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: left;
+  direction: ltr;
+}
+
+.profile-edit-modal .form-group > label,
+.profile-edit-modal .profile-edit .form-group > label {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
+.profile-edit .form-group input,
+.profile-edit .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.profile-edit .schedule-day-label input[type="checkbox"] {
+  width: auto;
+  min-width: 1rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.save-button {
+  padding: 0.75rem 2rem;
+  background: #667eea;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cancel-button {
+  padding: 0.75rem 2rem;
+  background: #6c757d;
+  color: white;
+  border-radius: 4px;
+}
+
+.schedule-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.schedule-day {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.schedule-day-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 150px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  direction: ltr;
+}
+
+.schedule-day-label span {
+  min-width: 120px;
+  display: inline-block;
+  text-align: left;
+}
+
+.schedule-day-label input[type="checkbox"] {
+  margin: 0;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.schedule-time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.schedule-time input[type="time"] {
+  width: auto;
+  min-width: 0;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.profile-edit .schedule-time input[type="time"] {
+  width: auto;
+}
+
+.schedule-time span {
+  color: #666;
+}
+
+.photo-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.photo-input-hidden {
+  display: none;
+}
+
+.photo-upload-area {
+  cursor: pointer;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: #fafafa;
+  width: 100%;
+}
+
+.photo-upload-area:hover {
+  border-color: #667eea;
+  background: #f0f0ff;
+}
+
+.photo-upload-area.dragging {
+  border-color: #667eea;
+  background: #e8e9ff;
+  border-style: solid;
+}
+
+.photo-upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.photo-upload-icon {
+  width: 40px;
+  height: 40px;
+  color: #999;
+}
+
+.photo-upload-text {
+  font-weight: 500;
+  color: #333;
+  font-size: 1rem;
+}
+
+.photo-upload-hint {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.photo-preview-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.photo-preview {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+.photo-delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.photo-delete-btn:hover {
+  background: #c82333;
+}
+
+.photo-delete-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .schedule-day {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .schedule-time {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .photo-upload-placeholder {
+    padding: 2rem 1.5rem;
+  }
+}

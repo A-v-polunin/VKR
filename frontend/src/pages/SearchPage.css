@@ -1,0 +1,47 @@
+.search-page {
+  padding: 1rem;
+}
+
+.search-page h1 {
+  margin-bottom: 2rem;
+}
+
+.quick-tags {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.quick-tags button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.quick-tags button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading,
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .search-results {
+    grid-template-columns: 1fr;
+  }
+}

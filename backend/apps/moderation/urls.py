@@ -1,0 +1,4 @@
+from django.urls import path
+from . import views
+app_name = 'moderation'
+urlpatterns = [path('complaints/', views.complaint_list, name='complaint_list'), path('complaints/create/', views.complaint_create, name='complaint_create'), path('complaints/<int:pk>/', views.complaint_detail, name='complaint_detail'), path('complaints/<int:pk>/resolve/', views.complaint_resolve, name='complaint_resolve'), path('bans/', views.ban_list, name='ban_list'), path('bans/create/', views.ban_create, name='ban_create'), path('requests/<int:pk>/moderate/', views.moderate_request, name='moderate_request'), path('users/<int:pk>/moderate/', views.moderate_user, name='moderate_user')]

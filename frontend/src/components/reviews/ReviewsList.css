@@ -1,0 +1,32 @@
+.reviews-list {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.reviews-list h2 {
+  margin-bottom: 1rem;
+}
+
+.review-item {
+  padding: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-rating {
+  color: #ffc107;
+}

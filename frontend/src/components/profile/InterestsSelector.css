@@ -1,0 +1,92 @@
+.interests-selector {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.interests-selector h2 {
+  margin-bottom: 1rem;
+}
+
+.add-interest {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.add-interest select {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.interests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.interest-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.interest-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.interest-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.interest-level {
+  color: #667eea;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.interests-hint {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.delete-button {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .add-interest {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+}

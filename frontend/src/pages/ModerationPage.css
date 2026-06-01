@@ -1,0 +1,29 @@
+.moderation-page {
+  padding: 1rem;
+}
+
+.moderation-page h1 {
+  margin-bottom: 2rem;
+}
+
+.moderation-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.moderation-tabs button {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.moderation-tabs button.active {
+  border-bottom-color: #667eea;
+  color: #667eea;
+  font-weight: bold;
+}

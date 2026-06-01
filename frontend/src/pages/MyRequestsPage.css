@@ -1,0 +1,74 @@
+.my-requests-page {
+  padding: 1rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.create-button {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.request-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.request-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.status-select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.edit-link {
+  padding: 0.5rem 1rem;
+  background: #28a745;
+  color: white;
+  border-radius: 4px;
+}
+
+.participants-button {
+  padding: 0.5rem 1rem;
+  background: #17a2b8;
+  color: white;
+  border-radius: 4px;
+}
+
+.no-requests {
+  text-align: center;
+  padding: 3rem;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .request-actions {
+    flex-direction: column;
+  }
+}

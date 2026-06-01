@@ -1,0 +1,115 @@
+.telegram-connect {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.telegram-connect h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+.telegram-connect-info {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.telegram-connect-steps {
+  background: white;
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 1rem 0;
+  list-style-position: inside;
+}
+
+.telegram-connect-steps li {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.telegram-connect-steps code {
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+.telegram-connect-form {
+  margin-top: 1.5rem;
+}
+
+.telegram-connect-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.telegram-connect-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.telegram-code-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: 'Courier New', monospace;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.telegram-code-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.telegram-code-input:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+.connect-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+  width: 100%;
+}
+
+.connect-button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.connect-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+}
