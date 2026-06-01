@@ -4,7 +4,7 @@
 
 - **Backend**: Django + Django REST Framework + Django Channels (WebSocket)
 - **Frontend**: React + Vite
-- **База данных**: SQLite / ostgreSQL
+- **База данных**: SQLite / PostgreSQL
 - **WebSocket**: Django Channels
 - **Telegram**: python-telegram-bot
 
