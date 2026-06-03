@@ -24,7 +24,7 @@ services:
       retries: 10
 
   backend:
-    build: ./backend
+    image: ${BACKEND_IMAGE}
     restart: always
     expose:
       - "8000"
@@ -42,17 +42,8 @@ services:
     volumes:
       - media_data:/app/media
 
-  frontend:
-    build:
-      context: ./frontend
-      args:
-        VITE_YANDEX_MAPS_API_KEY: ${VITE_YANDEX_MAPS_API_KEY}
-    restart: always
-    expose:
-      - "3000"
-
   telegram_bot:
-    build: ./backend
+    image: ${BACKEND_IMAGE}
     restart: always
     entrypoint: []
     command: python telegram_bot/bot.py
@@ -67,6 +58,12 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+
+  frontend:
+    image: ${FRONTEND_IMAGE}
+    restart: always
+    expose:
+      - "3000"
 
   nginx:
     image: nginx:alpine
