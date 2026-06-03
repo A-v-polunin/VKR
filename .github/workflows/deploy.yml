@@ -64,12 +64,10 @@ jobs:
             mkdir -p /app/nginx
 
             cat > /app/.env << 'ENVEOF'
+            DJANGO_SETTINGS_MODULE=config.settings
             SECRET_KEY=${{ secrets.SECRET_KEY }}
             DEBUG=${{ secrets.DEBUG }}
             ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}
-            DB_NAME=${{ secrets.DB_NAME }}
-            DB_USER=${{ secrets.DB_USER }}
-            DB_PASSWORD=${{ secrets.DB_PASSWORD }}
             TELEGRAM_BOT_TOKEN=${{ secrets.TELEGRAM_BOT_TOKEN }}
             YANDEX_MAPS_API_KEY=${{ secrets.YANDEX_MAPS_API_KEY }}
             VITE_YANDEX_MAPS_API_KEY=${{ secrets.VITE_YANDEX_MAPS_API_KEY }}
